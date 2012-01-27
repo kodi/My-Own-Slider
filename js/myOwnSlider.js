@@ -1,19 +1,15 @@
 
 var MyOwnSlider = function(){
 
-
-
     var SLIDER_CONTAINER_ID = null;
     var SLIDER_WRAPPER_ID = '#item_wrapper';
     var SLIDER_ITEM_CLASS = '.slider_item';
-    var SWING_TIME = 250;
+    var SWING_TIME = 450;
     var CONTENT_WIDTH = null;
     var SLIDER_ITEM_MARGIN_RIGHT = 24;
     var LAST_ELM_WIDTH = null;
-
     var LEFT = 0;
-
-    var STEP = 400;
+    var STEP = 524;
 
     return {
 
@@ -39,6 +35,9 @@ var MyOwnSlider = function(){
             this.addListeners();
         },
 
+        /**
+         * ----------------------------------------
+         */
         calculateContentSize: function(){
 
             CONTENT_WIDTH = 0;
@@ -53,14 +52,9 @@ var MyOwnSlider = function(){
                     console.log(CONTENT_WIDTH);
                     LAST_ELM_WIDTH = width;
 
-
                 }
-                //console.log(element);
-
             }));
-
         },
-
 
         /**
          * ----------------------------------------
@@ -84,21 +78,15 @@ var MyOwnSlider = function(){
          * ----------------------------------------
          */
         moveRight: function(){
-
-
             if( (LEFT +STEP ) < (CONTENT_WIDTH - LAST_ELM_WIDTH ) ){
 
                 $(SLIDER_WRAPPER_ID).animate({
                     left: '-='+STEP
                 }, SWING_TIME, 'swing', function() {
-
-                    // Animation complete. CALLBACK?
-
+                    //@todo add callback
                 });
 
                 LEFT += STEP;
-
-                console.log(LEFT);
             }
         },
 
@@ -106,22 +94,17 @@ var MyOwnSlider = function(){
          * ----------------------------------------
          */
         moveLeft: function(){
-
             if(LEFT > 0 ){
 
                 $(SLIDER_WRAPPER_ID).animate({
                     left: '+='+STEP
                 }, SWING_TIME, 'swing', function() {
-
-                    // Animation complete. CALLBACK?
-
+                    //@todo add callback
                 });
 
                 LEFT -= STEP;
             }
         }
-
     }
-
 }();
 

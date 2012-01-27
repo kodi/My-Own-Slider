@@ -104,11 +104,12 @@ var MyOwnSlider = function(){
             if( CURRENT_INDEX < ITEMS.length ){
 
                 CURRENT_INDEX += 1;
+                CURRENT_RIGHT_EDGE = (CURRENT_RIGHT_EDGE - niceStep) + ITEMS[CURRENT_INDEX].width + SLIDER_ITEM_MARGIN_RIGHT;
 
                 $(SLIDER_WRAPPER_ID).animate({
                     left: '-='+niceStep
                 }, SWING_TIME, EASING_NAME, function() {
-                    CURRENT_RIGHT_EDGE = (CURRENT_RIGHT_EDGE - niceStep) + ITEMS[CURRENT_INDEX].width + SLIDER_ITEM_MARGIN_RIGHT;
+
                 });
 
                 LEFT += niceStep;
@@ -132,11 +133,12 @@ var MyOwnSlider = function(){
             if(LEFT > 0 ){
 
                 CURRENT_INDEX -= 1;
+                CURRENT_RIGHT_EDGE = (CURRENT_RIGHT_EDGE - niceStep) + ITEMS[CURRENT_INDEX].width + SLIDER_ITEM_MARGIN_RIGHT;
 
                 $(SLIDER_WRAPPER_ID).animate({
                     left: '+='+niceStep
                 }, SWING_TIME, EASING_NAME , function() {
-                    CURRENT_RIGHT_EDGE = (CURRENT_RIGHT_EDGE - niceStep) + ITEMS[CURRENT_INDEX].width + SLIDER_ITEM_MARGIN_RIGHT;
+
                 });
 
                 LEFT -= niceStep;

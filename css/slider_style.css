@@ -1,6 +1,7 @@
 
 
-.mos_container{
+
+#slider_content{
     width:100%;
     height: 600px;
     overflow: hidden;
@@ -17,7 +18,7 @@
 
 }
 
-.mos_container .slider_item{
+#slider_content .slider_item{
 
     display:inline;
     float: left;

@@ -35,7 +35,6 @@ var MyOwnSlider = function(){
          * ----------------------------------------
          */
         setup: function(){
-            $(SLIDER_CONTAINER_ID).addClass('mos_container');
             this.calculateContentSize();
             this.addListeners();
             CURRENT_INDEX = 0;

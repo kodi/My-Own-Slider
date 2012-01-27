@@ -4,12 +4,13 @@ var MyOwnSlider = function(){
     var SLIDER_CONTAINER_ID = null;
     var SLIDER_WRAPPER_ID = '#item_wrapper';
     var SLIDER_ITEM_CLASS = '.slider_item';
-    var SWING_TIME = 450;
+    var SWING_TIME = 500;
     var CONTENT_WIDTH = null;
     var SLIDER_ITEM_MARGIN_RIGHT = 24;
     var LAST_ELM_WIDTH = null;
     var LEFT = 0;
     var STEP = 524;
+    var EASING_NAME = 'easeInOutCubic';
 
     return {
 
@@ -82,7 +83,7 @@ var MyOwnSlider = function(){
 
                 $(SLIDER_WRAPPER_ID).animate({
                     left: '-='+STEP
-                }, SWING_TIME, 'swing', function() {
+                }, SWING_TIME, EASING_NAME, function() {
                     //@todo add callback
                 });
 
@@ -98,7 +99,7 @@ var MyOwnSlider = function(){
 
                 $(SLIDER_WRAPPER_ID).animate({
                     left: '+='+STEP
-                }, SWING_TIME, 'swing', function() {
+                }, SWING_TIME, EASING_NAME , function() {
                     //@todo add callback
                 });
 

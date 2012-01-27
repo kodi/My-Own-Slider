@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz'
+          rel='stylesheet' type='text/css'/>
+
+
+    <style type="text/css">
+
+
+        body {
+            font: 16px Helvetica, Sans-Serif;
+            line-height: 24px;
+            background: #f3f3f3;
+        }
+
+        #container {
+            margin: 24px auto;
+            width: 960px;
+            background: white;
+
+            border-left: solid 1px #eee;
+            border-right: solid 1px #eee;
+        }
+
+        #content{
+            padding: 24px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #333;
+            font-family: 'Yanone Kaffeesatz', arial, serif;
+        }
+    </style>
+
+    <link href="css/slider_style.css" rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+<div id="container">
+
+    <div id="content">
+        <h1>My Own Slider!</h1>
+
+        <div id="slider_content">
+            <div id="item_wrapper">
+                <div class="slider_item">
+                    <img src="resources/01.jpg" alt="" />
+                </div>
+
+                <div class="slider_item">
+                    <img src="resources/02.png" alt="" />
+                </div>
+
+                <div class="slider_item">
+                    <img src="resources/03.jpg" alt="" />
+                </div>
+
+                <div class="slider_item">
+                    <img src="resources/04.jpg" alt="" />
+                </div>
+
+                <div class="slider_item">
+                    <img src="resources/05.jpg" alt="" />
+                </div>
+
+                <div class="slider_item">
+                    <img src="resources/06.jpg" alt="" />
+                </div>
+
+                <div class="slider_item">
+                    <img src="resources/07.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery + our slider code -->
+    <script type="text/javascript"  src="js/jq.js"></script>
+    <script type="text/javascript"  src="js/myOwnSlider.js"></script>
+
+
+    <!--  START EVERYTHING -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            MyOwnSlider.init('slider_content');
+        });
+    </script>
+
+</div>
+</body>
+</html>
